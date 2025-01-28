@@ -7,6 +7,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Light.woff2') format('woff2'),
+        url('fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 *, ::before, ::after{
     font-family: "Roboto", "Open Sans", sans-serif;
     box-sizing: border-box;
@@ -16,7 +25,7 @@
 
 body{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
 }
 
 aside{
@@ -27,7 +36,7 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100vh;
+    height: 100%;
 }
 
 .dashboard{
@@ -65,7 +74,6 @@ article{
 }
 
 img[src="img/dashboard.svg"]{
-    height: auto;
     width: 60px;
 }
 
@@ -103,9 +111,12 @@ img[src="img/dashboard.svg"]{
 }
 
 header{
-    box-shadow: 0 0 6px silver;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 0;
+    width: auto;
 }
-
 .notifications{
     grid-column: 4 / 5;
 }
@@ -129,7 +140,6 @@ input[type="search"]{
     display: grid;
     grid-template-columns: 80px 5fr 2fr repeat(3, 80px);
     column-gap: 5px;
-    margin: 20px 20px 20px 0;
 }
 
 .greeting, .name{
@@ -167,3 +177,102 @@ button{
 .greeting, .name{
     align-self: flex-end;
 }
+
+article{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: #E2E8F0;
+    gap: 20px;
+    padding: 20px;
+    height: 100%;
+}
+
+.box{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.project-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+    gap: 20px;
+}
+
+.card{
+    height: 230px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+
+.icons{
+    justify-self: end;
+    align-self: center;
+    width: 100px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+article h3{
+    margin-bottom: 10px;
+}
+
+.trending-header{
+    margin-top: 10px;
+}
+
+body{
+    height: 100vh;
+}
+
+.world-overshoot{
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+    padding: 10px 0;
+}
+
+.announcement-info, .trending-people{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.announcement-info h4, .trending  h4{
+    margin: 5px 0;
+}
+
+.announcement-info, .trending{    
+    display: inline-block;
+}
+
+.person{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 10px;
+}
+
+.trending-picture{
+   height: 50px;
+   border-radius: 50%;
+   align-self: center;
+}
+
+.person > p{
+    grid-column: 2 / 3;
+}
+
+.person > img{
+    grid-row: 1 / 3;
+}
+
+
+article  p{
+    color: #7B7B7B;
+    font-weight: 300;
+}
+
+
+
